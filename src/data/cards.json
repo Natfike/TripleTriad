@@ -1,0 +1,1347 @@
+[
+    {
+        "cardGroup": "FFVIII",
+        "cardList": {
+            "levelOne": [
+                {
+                    "cardName": "Geezard",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "1",
+                        "left": "5",
+                        "right": "4",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGeezard.webp"
+                },
+                {
+                    "cardName": "Funguar",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "3",
+                        "right": "1",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTFunguar.webp"
+                },
+                {
+                    "cardName": "Bite Bug",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "1",
+                        "left": "5",
+                        "right": "3",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBiteBug.webp"
+                },
+                {
+                    "cardName": "Red Bat",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "2",
+                        "right": "1",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTRedBat.webp"
+                },
+                {
+                    "cardName": "Blobra",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "5",
+                        "right": "3",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBlobra.webp"
+                },
+                {
+                    "cardName": "Gayla",
+                    "cardRarity": 1,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "2",
+                        "left": "4",
+                        "right": "1",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGayla.webp"
+                },
+                {
+                    "cardName": "Gesper",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "1",
+                        "left": "1",
+                        "right": "5",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGesper.webp"
+                },
+                {
+                    "cardName": "Fastitocalon-F",
+                    "cardRarity": 1,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "3",
+                        "left": "1",
+                        "right": "5",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTFastitocalonF.webp"
+                },
+                {
+                    "cardName": "Blood Soul",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "1",
+                        "right": "1",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBloudSoul.webp"
+                },
+                {
+                    "cardName": "Caterchipillar",
+                    "cardRarity": 1,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "3",
+                        "right": "2",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCaterchipillar.webp"
+                },
+                {
+                    "cardName": "Cockatrice",
+                    "cardRarity": 1,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "2",
+                        "left": "6",
+                        "right": "1",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCockatrice.webp"
+                }
+            ],
+            "levelTwo": [
+                {
+                    "cardName": "Grat",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "1",
+                        "right": "1",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGrat.webp"
+                },
+                {
+                    "cardName": "Buel",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "3",
+                        "right": "2",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBuel.webp"
+                },
+                {
+                    "cardName": "Mesmerize",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "4",
+                        "right": "3",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTMesmerize.webp"
+                },
+                {
+                    "cardName": "Glacial Eye",
+                    "cardRarity": 2,
+                    "element": "ice",
+                    "numbers": {
+                        "top": "6",
+                        "left": "3",
+                        "right": "1",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGlacialEye.webp"
+                },
+                {
+                    "cardName": "Belhelmel",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "3",
+                        "right": "4",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBelhelmel.webp"
+                },
+                {
+                    "cardName": "Thrustaevis",
+                    "cardRarity": 2,
+                    "element": "wind",
+                    "numbers": {
+                        "top": "5",
+                        "left": "5",
+                        "right": "3",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTThrustaevis.webp"
+                },
+                {
+                    "cardName": "Anacondaur",
+                    "cardRarity": 2,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "5",
+                        "left": "5",
+                        "right": "1",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTAnacondaur.webp"
+                },
+                {
+                    "cardName": "Creeps",
+                    "cardRarity": 2,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "5",
+                        "left": "2",
+                        "right": "2",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCreeps.webp"
+                },
+                {
+                    "cardName": "Grendel",
+                    "cardRarity": 2,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "4",
+                        "left": "2",
+                        "right": "4",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGrendel.webp"
+                },
+                {
+                    "cardName": "Jelleye",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "7",
+                        "right": "2",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTJelleye.webp"
+                },
+                {
+                    "cardName": "Grand Mantis",
+                    "cardRarity": 2,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "3",
+                        "right": "2",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGrandMantis.webp"
+                }
+            ],
+            "levelThree": [
+                {
+                    "cardName": "Forbidden",
+                    "cardRarity": 3,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "2",
+                        "right": "6",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTForbidden.webp"
+                },
+                {
+                    "cardName": "Armadodo",
+                    "cardRarity": 3,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "6",
+                        "left": "6",
+                        "right": "3",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTArmadodo.webp"
+                },
+                {
+                    "cardName": "Tri-Face",
+                    "cardRarity": 3,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "3",
+                        "left": "5",
+                        "right": "5",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTriFace.webp"
+                },
+                {
+                    "cardName": "Fastitocalon",
+                    "cardRarity": 3,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "7",
+                        "left": "3",
+                        "right": "5",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTFastitocalon.webp"
+                },
+                {
+                    "cardName": "Snow Lion",
+                    "cardRarity": 3,
+                    "element": "ice",
+                    "numbers": {
+                        "top": "7",
+                        "left": "3",
+                        "right": "1",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSnowLion.webp"
+                },
+                {
+                    "cardName": "Ochu",
+                    "cardRarity": 3,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "3",
+                        "right": "6",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTOchu.webp"
+                },
+                {
+                    "cardName": "SAM08G",
+                    "cardRarity": 3,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "5",
+                        "left": "4",
+                        "right": "6",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSAM08G.webp"
+                },
+                {
+                    "cardName": "Death Claw",
+                    "cardRarity": 3,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "4",
+                        "left": "2",
+                        "right": "4",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTDeathClaw.webp"
+                },
+                {
+                    "cardName": "Cactuar",
+                    "cardRarity": 3,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "3",
+                        "right": "2",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCactuar.webp"
+                },
+                {
+                    "cardName": "Tonberry",
+                    "cardRarity": 3,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "4",
+                        "right": "6",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTonberry.webp"
+                },
+                {
+                    "cardName": "Abyss Worm",
+                    "cardRarity": 3,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "7",
+                        "left": "5",
+                        "right": "2",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTabyssWorm.webp"
+                }
+            ],
+            "levelFour": [
+                {
+                    "cardName": "Turtapod",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "7",
+                        "right": "3",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTurtapod.webp"
+                },
+                {
+                    "cardName": "Vysage",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "5",
+                        "right": "5",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTVysage.webp"
+                },
+                {
+                    "cardName": "T-Rexaur",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "7",
+                        "right": "6",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTRexaur.webp"
+                },
+                {
+                    "cardName": "Bomb",
+                    "cardRarity": 4,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "2",
+                        "left": "3",
+                        "right": "7",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBomb.webp"
+                },
+                {
+                    "cardName": "Blitz",
+                    "cardRarity": 4,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "1",
+                        "left": "7",
+                        "right": "6",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBlitz.webp"
+                },
+                {
+                    "cardName": "Wendigo",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "6",
+                        "right": "3",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTWendigo.webp"
+                },
+                {
+                    "cardName": "Torama",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "4",
+                        "right": "4",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTorama.webp"
+                },
+                {
+                    "cardName": "Imp",
+                    "cardRarity": 4,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "6",
+                        "right": "7",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTImp.webp"
+                },
+                {
+                    "cardName": "Blue Dragon",
+                    "cardRarity": 4,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "6",
+                        "left": "3",
+                        "right": "2",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBlueDragon.webp"
+                },
+                {
+                    "cardName": "Adamantoise",
+                    "cardRarity": 4,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "7",
+                        "left": "3",
+                        "right": "5",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTAdamantoise.webp"
+                },
+                {
+                    "cardName": "Hexadragon",
+                    "cardRarity": 4,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "7",
+                        "left": "3",
+                        "right": "5",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTHexadragon.webp"
+                }
+            ],
+            "levelFive": [
+                {
+                    "cardName": "Iron Giant",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "5",
+                        "right": "5",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTIronGiant.webp"
+                },
+                {
+                    "cardName": "Behemoth",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "7",
+                        "right": "6",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBehemoth.webp"
+                },
+                {
+                    "cardName": "Chimera",
+                    "cardRarity": 5,
+                    "element": "water",
+                    "numbers": {
+                        "top": "7",
+                        "left": "3",
+                        "right": "6",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTChimera.webp"
+                },
+                {
+                    "cardName": "PuPu",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "1",
+                        "right": "A",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTPuPu.webp"
+                },
+                {
+                    "cardName": "Elastoid",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "7",
+                        "right": "2",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTElastoid.webp"
+                },
+                {
+                    "cardName": "GIM47N",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "4",
+                        "right": "5",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGIM47N.webp"
+                },
+                {
+                    "cardName": "Malboro",
+                    "cardRarity": 5,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "7",
+                        "left": "2",
+                        "right": "7",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTMalboro.webp"
+                },
+                {
+                    "cardName": "Ruby Dragon",
+                    "cardRarity": 5,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "7",
+                        "left": "4",
+                        "right": "2",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTRubyDragon.webp"
+                },
+                {
+                    "cardName": "Elnoyle",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "6",
+                        "right": "3",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTElnoyle.webp"
+                },
+                {
+                    "cardName": "Tonberry King",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "4",
+                        "right": "6",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTonberryKing.webp"
+                },
+                {
+                    "cardName": "Wedge, Biggs",
+                    "cardRarity": 5,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "7",
+                        "right": "6",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBiggsWedge.webp"
+                }
+            ],
+            "levelSix": [
+                {
+                    "cardName": "Fujin, Raijin",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "4",
+                        "right": "8",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTFujinRaijin.webp"
+                },
+                {
+                    "cardName": "Elvoret",
+                    "cardRarity": 6,
+                    "element": "wind",
+                    "numbers": {
+                        "top": "7",
+                        "left": "4",
+                        "right": "8",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTElvoret.webp"
+                },
+                {
+                    "cardName": "X-ATM092",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "3",
+                        "right": "8",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTX-ATM092.webp"
+                },
+                {
+                    "cardName": "Granaldo",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "5",
+                        "right": "2",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGranaldo.webp"
+                },
+                {
+                    "cardName": "Gerogero",
+                    "cardRarity": 6,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "1",
+                        "left": "3",
+                        "right": "8",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGerogero.webp"
+                },
+                {
+                    "cardName": "Iguion",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "2",
+                        "right": "2",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTIguion.webp"
+                },
+                {
+                    "cardName": "Abaddon",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "5",
+                        "right": "8",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTAbaddon.webp"
+                },
+                {
+                    "cardName": "Trauma",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "6",
+                        "right": "8",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTrauma.webp"
+                },
+                {
+                    "cardName": "Oilboyle",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "1",
+                        "left": "8",
+                        "right": "8",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTOilboyle.webp"
+                },
+                {
+                    "cardName": "Shumi Tribe",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "4",
+                        "right": "5",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTNORG.webp"
+                },
+                {
+                    "cardName": "Krysta",
+                    "cardRarity": 6,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "1",
+                        "right": "5",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTKrysta.webp"
+                }
+            ],
+            "levelSeven": [
+                {
+                    "cardName": "Propagator",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "8",
+                        "right": "4",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTPropagator.webp"
+                },
+                {
+                    "cardName": "Jumbo Cactuar",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "4",
+                        "right": "8",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTJumboCactuar.webp"
+                },
+                {
+                    "cardName": "Tri-Point",
+                    "cardRarity": 7,
+                    "element": "thunder",
+                    "numbers": {
+                        "top": "8",
+                        "left": "8",
+                        "right": "5",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTriPoint.webp"
+                },
+                {
+                    "cardName": "Gargantua",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "8",
+                        "right": "6",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGargantua.webp"
+                },
+                {
+                    "cardName": "Mobile Type 8",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "3",
+                        "right": "6",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTMobileType8.webp"
+                },
+                {
+                    "cardName": "Sphinxara",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "8",
+                        "right": "3",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSphinxaur.webp"
+                },
+                {
+                    "cardName": "Tiamat",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "4",
+                        "right": "8",
+                        "bottom": "5"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTTiamat.webp"
+                },
+                {
+                    "cardName": "BGH251F2",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "5",
+                        "right": "7",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBGH251F2.webp"
+                },
+                {
+                    "cardName": "Red Giant",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "7",
+                        "right": "8",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTRedGiant.webp"
+                },
+                {
+                    "cardName": "Catoblepas",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "1",
+                        "left": "7",
+                        "right": "8",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCatoblepas.webp"
+                },
+                {
+                    "cardName": "Ultima Weapon",
+                    "cardRarity": 7,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "8",
+                        "right": "7",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTUltimaWeapon.webp"
+                }
+            ],
+            "levelEight": [
+                {
+                    "cardName": "Chubby Chocobo",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "9",
+                        "right": "4",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTChubbyChocobo.webp"
+                },
+                {
+                    "cardName": "Angelo",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "9",
+                        "left": "3",
+                        "right": "6",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTAngelo.webp"
+                },
+                {
+                    "cardName": "Gilgamesh",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "3",
+                        "left": "6",
+                        "right": "7",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTGilgamesh.webp"
+                },
+                {
+                    "cardName": "MiniMog",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "9",
+                        "left": "2",
+                        "right": "3",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTMiniMog.webp"
+                },
+                {
+                    "cardName": "Chocobo",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "9",
+                        "left": "4",
+                        "right": "4",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTChocobo.webp"
+                },
+                {
+                    "cardName": "Shiva",
+                    "cardRarity": 8,
+                    "element": "ice",
+                    "numbers": {
+                        "top": "6",
+                        "left": "9",
+                        "right": "7",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTShiva.webp"
+                },
+                {
+                    "cardName": "Ifrit",
+                    "cardRarity": 8,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "9",
+                        "left": "8",
+                        "right": "6",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTIfrit.webp"
+                },
+                {
+                    "cardName": "Quezacotl",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "4",
+                        "right": "9",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTQuezacotl.webp"
+                },
+                {
+                    "cardName": "Siren",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "2",
+                        "right": "9",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSiren.webp"
+                },
+                {
+                    "cardName": "Sacred",
+                    "cardRarity": 8,
+                    "element": "earth",
+                    "numbers": {
+                        "top": "5",
+                        "left": "9",
+                        "right": "1",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSacred.webp"
+                },
+                {
+                    "cardName": "Minotaur",
+                    "cardRarity": 8,
+                    "element": "none",
+                    "numbers": {
+                        "top": "9",
+                        "left": "9",
+                        "right": "5",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTMinotaur.webp"
+                }
+            ],
+            "LevelNine": [
+                {
+                    "cardName": "Carbuncle",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "4",
+                        "right": "4",
+                        "bottom": "A"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCarbuncle.webp"
+                },
+                {
+                    "cardName": "Diablos",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "3",
+                        "right": "A",
+                        "bottom": "8"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTDiablos.webp"
+                },
+                {
+                    "cardName": "Leviathan",
+                    "cardRarity": 9,
+                    "element": "water",
+                    "numbers": {
+                        "top": "7",
+                        "left": "7",
+                        "right": "A",
+                        "bottom": "1"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTLeviathan.webp"
+                },
+                {
+                    "cardName": "Odin",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "5",
+                        "right": "A",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTOdin.webp"
+                },
+                {
+                    "cardName": "Pandemona",
+                    "cardRarity": 9,
+                    "element": "wind",
+                    "numbers": {
+                        "top": "A",
+                        "left": "7",
+                        "right": "1",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTPandemona.webp"
+                },
+                {
+                    "cardName": "Cerberus",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "7",
+                        "left": "A",
+                        "right": "4",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTCerberus.webp"
+                },
+                {
+                    "cardName": "Alexander",
+                    "cardRarity": 9,
+                    "element": "light",
+                    "numbers": {
+                        "top": "9",
+                        "left": "2",
+                        "right": "A",
+                        "bottom": "4"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTAlexander.webp"
+                },
+                {
+                    "cardName": "Phoenix",
+                    "cardRarity": 9,
+                    "element": "fire",
+                    "numbers": {
+                        "top": "7",
+                        "left": "A",
+                        "right": "2",
+                        "bottom": "7"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTPhoenix.webp"
+                },
+                {
+                    "cardName": "Bahamut",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "A",
+                        "left": "6",
+                        "right": "8",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTBahamut.webp"
+                },
+                {
+                    "cardName": "Doomtrain",
+                    "cardRarity": 9,
+                    "element": "poison",
+                    "numbers": {
+                        "top": "3",
+                        "left": "A",
+                        "right": "1",
+                        "bottom": "A"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTDoomtrain.webp"
+                },
+                {
+                    "cardName": "Eden",
+                    "cardRarity": 9,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "A",
+                        "right": "4",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTEden.webp"
+                }
+            ],
+            "LevelTen": [
+                {
+                    "cardName": "Ward",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "A",
+                        "left": "8",
+                        "right": "7",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTWard.webp"
+                },
+                {
+                    "cardName": "Kiros",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "A",
+                        "right": "7",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTKiros.webp"
+                },
+                {
+                    "cardName": "Laguna",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "5",
+                        "left": "9",
+                        "right": "A",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTLaguna.webp"
+                },
+                {
+                    "cardName": "Selphie",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "A",
+                        "left": "4",
+                        "right": "8",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSelphie.webp"
+                },
+                {
+                    "cardName": "Quistis",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "9",
+                        "left": "2",
+                        "right": "6",
+                        "bottom": "A"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTQuistis.webp"
+                },
+                {
+                    "cardName": "Irvine",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "2",
+                        "left": "A",
+                        "right": "6",
+                        "bottom": "9"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTIrvine.webp"
+                },
+                {
+                    "cardName": "Zell",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "8",
+                        "left": "6",
+                        "right": "5",
+                        "bottom": "A"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTZell.webp"
+                },
+                {
+                    "cardName": "Rinoa",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "4",
+                        "left": "A",
+                        "right": "A",
+                        "bottom": "2"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTRinoa.webp"
+                },
+                {
+                    "cardName": "Edea",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "A",
+                        "left": "3",
+                        "right": "A",
+                        "bottom": "3"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTEdea.webp"
+                },
+                {
+                    "cardName": "Seifer",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "6",
+                        "left": "4",
+                        "right": "9",
+                        "bottom": "A"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSeifer.webp"
+                },
+                {
+                    "cardName": "Squall",
+                    "cardRarity": 10,
+                    "element": "none",
+                    "numbers": {
+                        "top": "A",
+                        "left": "9",
+                        "right": "4",
+                        "bottom": "6"
+                    },
+                    "cardImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/TTSquall.webp"
+                }
+            ]
+        }
+    }
+]

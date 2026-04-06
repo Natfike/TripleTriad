@@ -1,0 +1,204 @@
+/* import police for the FFVIII menu */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* =========================================
+   1. Background
+   ========================================= */
+
+.room-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background-color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+.wood-table {
+  width: 80%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0; 
+  background-color: #8b4513;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  ), 
+  linear-gradient(to right, #8b4513, #a0522d);
+  border-left: 15px solid #5d2e0a;
+  border-right: 15px solid #5d2e0a;
+  box-shadow: inset 20px 0 40px rgba(0,0,0,0.3), inset -20px 0 40px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================
+   2. Menu
+   ========================================= */
+
+.ffviii-panel {
+  font-family: 'VT323', monospace;
+  background: linear-gradient(180deg, #606060 0%, #404040 100%);
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+  padding: 40px 60px;
+  color: white;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.ffviii-title {
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 3.5rem;
+  margin: 0 0 30px 0;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ffviii-button {
+  font-family: 'VT323', monospace;
+  background: linear-gradient(180deg, #707070 0%, #505050 100%);
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+  transition: transform 0.1s;
+}
+
+.ffviii-button:hover {
+  background: linear-gradient(180deg, #a0a0a0 0%, #707070 100%);
+}
+
+.ffviii-button:active {
+  background: linear-gradient(180deg, #404040 0%, #202020 100%);
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000;
+}
+
+/* =========================================
+   3. Gallery
+   ========================================= */
+
+.gallery-panel {
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh; 
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #a0a0a0;
+  padding-bottom: 15px;
+}
+
+.gallery-header .ffviii-title {
+  margin: 0;
+}
+
+.gallery-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #000;
+  color: #d0d0d0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding-top: 30px; 
+  scroll-padding-top: 30px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.ffviii-card-item {
+  background: linear-gradient(180deg, #707070 0%, #404040 100%);
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.ffviii-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+  border-color: #FFF;
+}
+
+.card-name {
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.card-image-container {
+  width: 100%;
+  aspect-ratio: 3/4; 
+  background-color: #222;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-rarity {
+  color: #ffeb3b;
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.gallery-grid::-webkit-scrollbar {
+  width: 12px;
+}
+.gallery-grid::-webkit-scrollbar-track {
+  background: #303030; 
+  border: 1px solid #000;
+}
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: #707070; 
+  border: 1px solid #000;
+}
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+  background: #909090; 
+}
