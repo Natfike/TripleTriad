@@ -1,0 +1,26 @@
+{
+    "translation": {
+        "home": {
+            "title": "Triple Triad",
+            "authenticate": "Authentification",
+            "gallery": "Gallerie"
+        },
+        "auth": {
+            "title":"Authentification",
+            "login":"Connexion",
+            "username":"Nom d'utilisateur",
+            "password":"Mot de passe",
+            "register":"Inscription",
+            "sign_in":"Se connecter",
+            "signing_in":"Connection...",
+            "registering":"Création du compte...",
+            "created":"Compte créé"
+        },
+        "gallery": {
+            "title":"Gallerie",
+            "back":"Retour",
+            "subtitle":"Voici les cartes du jeu !",
+            "rarity":"Rareté :"
+        }
+    }
+}

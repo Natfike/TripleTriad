@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/App.css';
 
 function Auth() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
 
     const API_URL = import.meta.env.VITE_API_URL;
@@ -70,18 +72,18 @@ function Auth() {
         <div className="room-container">
             <div className="wood-table">
                 <div className="ffviii-panel auth-panel">
-                    <h1 className="ffviii-title">Authentication</h1>
+                    <h1 className="ffviii-title">{t('auth.title')}</h1>
                     
                     <div className="menu-auth">
                         
                         { /* Login Form */ }
                         <form className="auth-form" onSubmit={handleLogin}>
-                            <h2 className="auth-subtitle">Login</h2>
+                            <h2 className="auth-subtitle">{t('auth.login')}</h2>
 
                             {loginError && <div className="error-message">{loginError}</div>}
 
                             <div className="input-group">
-                                <label>Username</label>
+                                <label>{t('auth.username')}</label>
                                 <input 
                                     type="text" 
                                     className="ffviii-input"
@@ -93,7 +95,7 @@ function Auth() {
                             </div>
                             
                             <div className="input-group">
-                                <label>Password</label>
+                                <label>{t('auth.password')}</label>
                                 <input 
                                     type="password" 
                                     className="ffviii-input"
@@ -105,7 +107,7 @@ function Auth() {
                             </div>
                             
                             <button type="submit" className="ffviii-button" disabled={isLoginLoading}>
-                                {isLoginLoading ? 'Signing In...' : 'Sign In'}
+                                {isLoginLoading ? t('auth.signing_in') : t('auth.sign_in')}
                             </button>
                         </form>
 
@@ -113,13 +115,13 @@ function Auth() {
 
                         { /* Registration Form */ }
                         <form className="auth-form" onSubmit={handleRegister}>
-                            <h2 className="auth-subtitle">Register</h2>
-                            
+                            <h2 className="auth-subtitle">{t('auth.register')}</h2>
+
                             {registerError && <div className="error-message">{registerError}</div>}
                             {registerSuccess && <div className="success-message">{registerSuccess}</div>}
 
                             <div className="input-group">
-                                <label>Username</label>
+                                <label>{t('auth.username')}</label>
                                 <input 
                                     type="text" 
                                     className="ffviii-input"
@@ -131,7 +133,7 @@ function Auth() {
                             </div>
                             
                             <div className="input-group">
-                                <label>Password</label>
+                                <label>{t('auth.password')}</label>
                                 <input 
                                     type="password" 
                                     className="ffviii-input"
@@ -143,7 +145,7 @@ function Auth() {
                             </div>
                             
                             <button type="submit" className="ffviii-button" disabled={isRegisterLoading}>
-                                {isRegisterLoading ? 'Creating Account...' : 'Create Account'}
+                                {isRegisterLoading ? t('auth.registering') : t('auth.created')}
                             </button>
                         </form>
 
