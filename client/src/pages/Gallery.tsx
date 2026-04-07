@@ -1,12 +1,28 @@
 import { Link } from 'react-router-dom';
-import cards from '../data/cards.json';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Gallery() {
+
+    const API_URL = import.meta.env.VITE_API_URL;
+    const [cards, setCards] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState('');
     const { t } = useTranslation();
-    const allCards = cards.flatMap(group => 
-        Object.values(group.cardList).flat()
-    );
+
+    // Fetch all cards from server
+    useEffect(() => {
+        axios.get(`${API_URL}/api/cards`)
+        .then(response => {
+            setCards(response.data);
+            setIsLoading(false);
+        })
+        .catch(err => {
+            setError(err.message);
+            setIsLoading(false);
+        })
+    }, [API_URL]);
 
     return(
         <div className="room-container">
@@ -21,8 +37,11 @@ function Gallery() {
                     
                     <p className="gallery-subtitle">{t('gallery.subtitle')}</p>
                     
+                    {isLoading && <p>{t('gallery.loading')}</p>}
+                    {error && <p className="error-message">{t('gallery.error')}</p>}
+
                     <div className="gallery-grid">
-                        {allCards.map((card, index) => (
+                        {cards.map((card, index) => (
                             <div key={index} className="ffviii-card-item">
                                 <h2 className="card-name">{card.cardName}</h2>
                                 <div className="card-image-container">

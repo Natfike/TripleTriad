@@ -3,7 +3,8 @@
         "home": {
             "title": "Triple Triad",
             "authenticate": "Authenticate",
-            "gallery": "Gallery"
+            "gallery": "Gallery",
+            "logout": "Logout"
         },
         "auth": {
             "title":"Authentication",

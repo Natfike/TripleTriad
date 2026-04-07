@@ -11,6 +11,7 @@ export interface ICard extends Document {
         bottom: string;
     };
     cardImage: string;
+    cardGroup: string;
 };
 
 const cardSchema: Schema = new Schema({
@@ -23,7 +24,8 @@ const cardSchema: Schema = new Schema({
         right: { type: String, required: true },
         bottom: { type: String, required: true }
     },
-    cardImage: { type: String, required: true }
+    cardImage: { type: String, required: true },
+    cardGroup: { type: String, required: true }
 });
 
 export default mongoose.model<ICard>('Card', cardSchema);
