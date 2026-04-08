@@ -2,27 +2,42 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../styles/Gallery.css';
 
 function Gallery() {
 
     const API_URL = import.meta.env.VITE_API_URL;
+    const token = localStorage.getItem('token');
     const [cards, setCards] = useState([]);
+    const [ownedCardIds, setOwnedCardIds] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
     const { t } = useTranslation();
 
     // Fetch all cards from server
     useEffect(() => {
-        axios.get(`${API_URL}/api/cards`)
-        .then(response => {
-            setCards(response.data);
-            setIsLoading(false);
-        })
-        .catch(err => {
-            setError(err.message);
-            setIsLoading(false);
-        })
-    }, [API_URL]);
+        const fetchAllCards = axios.get(`${API_URL}/api/cards`)
+        let fetchUserCollection = Promise.resolve({ data: { cardCollection: [] } });
+
+        if (token) {
+            fetchUserCollection = axios.get(`${API_URL}/api/users/me`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+        }
+
+        Promise.all([fetchAllCards, fetchUserCollection])
+            .then(([cardsResponse, userResponse]) => {
+                setCards(cardsResponse.data);
+                setOwnedCardIds(userResponse.data.cardCollection || []);
+            })
+            .catch(error => {
+                console.error('Error fetching cards:', error);
+                setError(t('gallery.error'));
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
+    }, [API_URL, token]);
 
     return(
         <div className="room-container">
@@ -41,15 +56,18 @@ function Gallery() {
                     {error && <p className="error-message">{t('gallery.error')}</p>}
 
                     <div className="gallery-grid">
-                        {cards.map((card, index) => (
-                            <div key={index} className="ffviii-card-item">
-                                <h2 className="card-name">{card.cardName}</h2>
-                                <div className="card-image-container">
-                                    <img src={card.cardImage} alt={card.cardName} loading="lazy" />
+                        {!isLoading && cards.map((card, index) => {
+                            const isOwned = ownedCardIds.includes(card._id);
+                            return (
+                                <div key={index} className="ffviii-card-item">
+                                    <h2 className="card-name">{card.cardName}</h2>
+                                    <div className="card-image-container">
+                                        <img src={card.cardImage} alt={card.cardName} loading="lazy" className={!isOwned ? 'card-not-owned' : ''} />
+                                    </div>
+                                    <p className="card-rarity">{t('gallery.rarity')} {card.cardRarity}</p>
                                 </div>
-                                <p className="card-rarity">{t('gallery.rarity')} {card.cardRarity}</p>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                 </div>

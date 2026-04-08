@@ -2,6 +2,7 @@ import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
+import Card from '../models/Card.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -26,12 +27,29 @@ router.post('/register',async (req, res) => {
             return res.status(400).json({ message: 'User already exists' });
         }
 
+        const starterCards = await Card.find({
+            cardGroup: 'FFVIII',
+            cardRarity: { $in: [1, 2] }
+        });
+
+        console.log('Starter cards found:', starterCards.length);
+        
+        const starterCardIds = starterCards.map(card => card._id);
+
+        const emptyDeck = [
+             { name: 'Deck 1', cards: Array(5).fill(null) },
+             { name: 'Deck 2', cards: Array(5).fill(null) },
+             { name: 'Deck 3', cards: Array(5).fill(null) },
+             { name: 'Deck 4', cards: Array(5).fill(null) },
+             { name: 'Deck 5', cards: Array(5).fill(null) }
+        ]
+        
         const passwordHash = await bcrypt.hash(password, 10);
         const user = new User({
             username,
             passwordHash,
-            collection: [],
-            decks: []
+            cardCollection: starterCardIds,
+            decks: emptyDeck
         })
 
         await user.save();

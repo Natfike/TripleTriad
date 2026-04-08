@@ -1,0 +1,114 @@
+/* --- Deck.css --- */
+.deck-builder-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.deck-slots {
+  display: flex;
+  gap: 15px;
+}
+
+.deck-slot {
+  width: 120px;
+  height: 168px;
+  box-sizing: border-box;
+  border: 2px dashed #888;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.deck-slot.has-card {
+  border: 2px solid transparent;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.deck-slot:hover {
+  border-color: #ffeb3b;
+  background-color: rgba(255, 235, 59, 0.1);
+}
+
+.deck-slot.has-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 235, 59, 0.4);
+}
+
+.deck-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  text-shadow: 2px 2px 0px #000;
+  transition: color 0.2s;
+}
+
+.deck-arrow:disabled {
+  color: #444;
+  cursor: not-allowed;
+}
+
+.deck-arrow:not(:disabled):hover {
+  color: #ffeb3b;
+}
+
+.deck-title-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.deck-counter {
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
+  line-height: 1;
+  margin: 0;
+}
+
+.deck-name-input {
+  width: 220px;
+  margin: 0;
+}
+
+.deck-message-container {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.deck-actions-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.empty-slot-text {
+  color: #666;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.deck-card-image {
+  width: 100%;
+  height: 100%;  
+  object-fit: fill; 
+  display: block;
+}

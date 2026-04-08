@@ -1,4 +1,3 @@
-import './styles/App.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 
@@ -26,9 +25,14 @@ function App() {
                     <h1 className="ffviii-title">{t('home.title')}</h1>
                     <div className="menu-buttons">
                         {isAuthenticated ? (
-                            <button onClick={handleLogout} className="ffviii-button">
-                                {t('home.logout')}
-                            </button>
+                            <>
+                                <button onClick={handleLogout} className="ffviii-button">
+                                    {t('home.logout')}
+                                </button>
+                                <Link to="/deck">
+                                    <button className="ffviii-button">{t('home.deck')}</button>
+                                </Link>
+                            </>
                         ) : (
                             <Link to="/authentification">
                                 <button className="ffviii-button">{t('home.authenticate')}</button>

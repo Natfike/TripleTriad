@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import '../styles/App.css';
+import '../styles/Auth.css';
 
 function Auth() {
     const { t } = useTranslation();

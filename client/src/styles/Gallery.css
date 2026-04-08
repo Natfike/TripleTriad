@@ -1,0 +1,109 @@
+.gallery-panel {
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh; 
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #a0a0a0;
+  padding-bottom: 15px;
+  min-height: 65px;
+}
+
+.gallery-header .ffviii-title {
+  margin: 0;
+}
+
+.gallery-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 #000;
+  color: #d0d0d0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding-top: 30px; 
+  scroll-padding-top: 30px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.ffviii-card-item {
+  background: linear-gradient(180deg, #707070 0%, #404040 100%);
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.ffviii-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+  border-color: #FFF;
+}
+
+.card-name {
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.card-image-container {
+  width: 100%;
+  aspect-ratio: 3/4; 
+  background-color: #222;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-rarity {
+  color: #ffeb3b;
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.gallery-grid::-webkit-scrollbar {
+  width: 12px;
+}
+.gallery-grid::-webkit-scrollbar-track {
+  background: #303030; 
+  border: 1px solid #000;
+}
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: #707070; 
+  border: 1px solid #000;
+}
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+  background: #909090; 
+}
+
+.card-not-owned {
+  filter: grayscale(100%) brightness(50%);
+  opacity: 0.7;
+}

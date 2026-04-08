@@ -4,7 +4,8 @@
             "title": "Triple Triad",
             "authenticate": "Authenticate",
             "gallery": "Gallery",
-            "logout": "Logout"
+            "logout": "Logout",
+            "deck":"Modify Decks"
         },
         "auth": {
             "title":"Authentication",
@@ -21,7 +22,21 @@
             "title":"Gallery",
             "back":"Back",
             "subtitle":"Here are the cards from the game !",
-            "rarity":"Rarity :"
+            "rarity":"Rarity :",
+            "loading":"Loading cards...",
+            "error":"Error fetching cards"
+        },
+        "deck": {
+            "title":"Deck Builder",
+            "back":"Back",
+            "save":"Save Decks",
+            "saveSuccess":"Decks saved successfully!",
+            "saveError":"Error saving decks.",
+            "notAuthenticated":"You must be authenticated to modify decks.",
+            "error":"Error fetching user data.",
+            "loading":"Loading user data...",
+            "defaultName":"My Deck",
+            "cardList": "Card List"
         }
     }
 }
