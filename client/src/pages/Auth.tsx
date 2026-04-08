@@ -56,6 +56,9 @@ function Auth() {
             console.log('Registration successful:', response.data);
             setRegisterSuccess('Account created successfully! You can now log in.');
             setRegisterError('');
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('username', response.data.username);
+            navigate('/');
         })
         .catch(error => {
             console.error('Registration error:', error.response?.data || error.message);
