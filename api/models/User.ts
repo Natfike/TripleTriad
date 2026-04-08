@@ -10,6 +10,7 @@ export interface IUser extends Document {
     passwordHash: string;
     cardCollection: mongoose.Types.ObjectId[];
     decks: IDeck[];
+    lastPackOpened?: Date;
 }
 
 const deckSchema: Schema = new Schema({
@@ -48,7 +49,8 @@ const userSchema: Schema = new Schema({
             },
             message: 'A user cannot have more than 5 decks.'
         }
-    }
+    },
+    lastPackOpened: { type: Date }
 })
 
 export default mongoose.model<IUser>('User', userSchema);

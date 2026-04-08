@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 function App() {
   const { t, i18n } = useTranslation();
+  const API_URL = import.meta.env.VITE_API_URL;
+
+  const [dailyPullEnabled, setDailyPullEnabled] = useState(false);
 
   const token = localStorage.getItem('token');
   const isAuthenticated = !!token;
@@ -18,6 +24,27 @@ function App() {
     i18n.changeLanguage(newLang);
   }
 
+  useEffect(() => {
+        if (!token) {
+            setDailyPullEnabled(false);
+            return;
+        }
+
+        try {
+            axios.get(`${API_URL}/api/users/dailyPullAvailable`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    console.log(response.data);
+                    setDailyPullEnabled(response.data.dailyPullAvailable);
+                });
+        } catch (error) {
+            setDailyPullEnabled(false);
+        }
+  }, [token])
+
   return(
         <div className="room-container">
             <div className="wood-table">
@@ -31,6 +58,14 @@ function App() {
                                 </button>
                                 <Link to="/deck">
                                     <button className="ffviii-button">{t('home.deck')}</button>
+                                </Link>
+                                <Link to="/dailyPull">
+                                    <button 
+                                    className="ffviii-button"
+                                    disabled={!dailyPullEnabled}
+                                    >
+                                        {t('home.dailyPull')}
+                                    </button>
                                 </Link>
                             </>
                         ) : (

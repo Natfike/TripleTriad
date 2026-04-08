@@ -1,5 +1,6 @@
 import express from 'express';
 import User from '../models/User.js';
+import Card from '../models/Card.js';
 import { verifyToken, type AuthRequest } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -37,6 +38,54 @@ router.post('/decks', verifyToken, async (req: AuthRequest, res) => {
         await user.save();
 
         res.json({ message: 'Decks updated successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+})
+
+router.get('/dailyPullAvailable', verifyToken, async (req: AuthRequest, res) => {
+    try {
+        const user = await User.findById(req.user.userId);
+        if (!user) { return res.status(404).json({ message: 'User not found' }); }
+
+        const now = new Date();
+        const available = !user.lastPackOpened || (now.toDateString() !== user.lastPackOpened.toDateString());
+
+        res.status(200).json({ dailyPullAvailable: available });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+})
+
+router.post('/dailyPull', verifyToken, async (req: AuthRequest, res) => {
+    try {
+        const user = await User.findById(req.user.userId);
+        if (!user) { return res.status(404).json({ message: 'User not found' }); }
+
+        const now = new Date();
+        if (user.lastPackOpened && (now.toDateString() === user.lastPackOpened.toDateString())) {
+            return res.status(400).json({ message: 'You have already opened a pack today' });
+        }
+
+        const cardGroupSelected = req.body.cardGroup;
+
+        const drawnCards = await Card.aggregate([
+            { $match: { cardGroup: cardGroupSelected } },
+            { $sample: { size: 3 } }
+        ]);
+        const drawnCardIds = drawnCards.map(card => card._id);
+        const newCardIds = drawnCardIds.filter(id => !user.cardCollection.includes(id));
+
+        user.cardCollection.push(...newCardIds);
+        user.lastPackOpened = now;
+        await user.save();
+    
+        res.status(200).json({ 
+            message: 'Daily draw successful',
+            cards: drawnCards
+        });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
