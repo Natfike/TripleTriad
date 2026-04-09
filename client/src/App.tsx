@@ -37,7 +37,6 @@ function App() {
                 }
             })
                 .then(response => {
-                    console.log(response.data);
                     setDailyPullEnabled(response.data.dailyPullAvailable);
                 });
         } catch (error) {

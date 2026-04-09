@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import cardRoutes from './routes/cardRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import packRoutes from './routes/packRoutes.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/cards', cardRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/packs', packRoutes);
 
 const MONGO_URI = process.env.MONGO_URI
 

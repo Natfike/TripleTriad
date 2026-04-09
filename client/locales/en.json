@@ -2,6 +2,7 @@
     "translation": {
         "home": {
             "title": "Triple Triad",
+            "dailyPull": "Daily Pull",
             "authenticate": "Authenticate",
             "gallery": "Gallery",
             "logout": "Logout",
@@ -37,6 +38,16 @@
             "loading":"Loading user data...",
             "defaultName":"My Deck",
             "cardList": "Card List"
+        },
+        "dailyPull":{
+            "title":"Daily Pull",
+            "back":"Back",
+            "success":"Success",
+            "error":"Error",
+            "opening":"Opening...",
+            "open":"Open",
+            "rewards": "Your new cards :",
+            "close":"Close"
         }
     }
 }

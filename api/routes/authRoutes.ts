@@ -31,8 +31,6 @@ router.post('/register',async (req, res) => {
             cardGroup: 'FFVIII',
             cardRarity: { $in: [1, 2] }
         });
-
-        console.log('Starter cards found:', starterCards.length);
         
         const starterCardIds = starterCards.map(card => card._id);
 

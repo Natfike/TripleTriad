@@ -1,6 +1,12 @@
 [
     {
+        "cardGroup": "FFVII",
+        "cardGroupImage": "https://upload.wikimedia.org/wikipedia/fr/thumb/a/af/Final_Fantasy_VII_Logo.png/250px-Final_Fantasy_VII_Logo.png",
+        "cardList": {}
+    },
+    {
         "cardGroup": "FFVIII",
+        "cardGroupImage": "https://res.cloudinary.com/dzp2e57l2/image/upload/v1775735605/Final_Fantasy_VIII_Logo.webp",
         "cardList": {
             "levelOne": [
                 {

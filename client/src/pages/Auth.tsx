@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -46,14 +46,12 @@ function Auth() {
 
     const handleRegister = (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Register attempt:', { registerUsername, registerPassword });
 
         axios.post(`${API_URL}/api/auth/register`, {
             username: registerUsername,
             password: registerPassword
         })
         .then(response => {
-            console.log('Registration successful:', response.data);
             setRegisterSuccess('Account created successfully! You can now log in.');
             setRegisterError('');
             localStorage.setItem('token', response.data.token);
@@ -69,6 +67,13 @@ function Auth() {
             setIsRegisterLoading(false);
         });
     };
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            navigate('/');
+        }
+    }, [navigate]);
 
     // UI
     return(

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import '../styles/Deck.css';
@@ -19,6 +19,7 @@ interface Deck {
 
 function Deck() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const API_URL = import.meta.env.VITE_API_URL;
     const token = localStorage.getItem('token');
 
@@ -35,7 +36,7 @@ function Deck() {
         if (!token) {
             setError(t('deck.notAuthenticated'));
             setIsLoading(false);
-            return;
+            navigate('/');
         }
 
         const fetchAllCards = axios.get(`${API_URL}/api/cards`);

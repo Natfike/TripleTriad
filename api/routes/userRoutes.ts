@@ -69,12 +69,18 @@ router.post('/dailyPull', verifyToken, async (req: AuthRequest, res) => {
             return res.status(400).json({ message: 'You have already opened a pack today' });
         }
 
-        const cardGroupSelected = req.body.cardGroup;
+        const cardGroupSelected = req.body.packCode;
 
         const drawnCards = await Card.aggregate([
             { $match: { cardGroup: cardGroupSelected } },
             { $sample: { size: 3 } }
         ]);
+
+        console.log('Drawn cards:', drawnCards);
+        if (drawnCards.length === 0) {
+            return res.status(400).json({ message: 'No cards available for this pack' });
+        }
+
         const drawnCardIds = drawnCards.map(card => card._id);
         const newCardIds = drawnCardIds.filter(id => !user.cardCollection.includes(id));
 

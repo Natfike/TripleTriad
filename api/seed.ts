@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import Card from './models/Card.js';
+import Pack from './models/Pack.js';
 
 dotenv.config();
 
@@ -20,9 +21,17 @@ const seedDatabase = async () => {
         const cardsData = JSON.parse(rawData);
 
         const validCards: any[] = [];
+        const validGroups: any[] = [];
 
         cardsData.forEach((groupObject: any) => {
             const currentGroup = groupObject.cardGroup;
+
+            validGroups.push({
+                code: currentGroup,
+                coverImage: groupObject.cardGroupImage
+            });
+
+
             const cardList = groupObject.cardList;
 
             for (const [levelName, cardsArray] of Object.entries(cardList)) {
@@ -43,7 +52,9 @@ const seedDatabase = async () => {
         console.log(`Parsed ${validCards.length} cards from JSON`);
 
         await Card.deleteMany({});
+        await Pack.deleteMany({});
 
+        await Pack.insertMany(validGroups);
         await Card.insertMany(validCards);
 
         console.log('Database seeding completed');
