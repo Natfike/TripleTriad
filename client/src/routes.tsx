@@ -4,6 +4,7 @@ import Gallery from "./pages/Gallery";
 import Auth from "./pages/Auth";
 import Deck from "./pages/Deck";
 import DailyPull from "./pages/DailyPull";
+import Play from "./pages/Play";
 
 export const router = createBrowserRouter([
     {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
     {
         path: "/dailyPull",
         element: <DailyPull />,
+    },
+    {
+        path: "/play",
+        element: <Play />,
     }
 ])

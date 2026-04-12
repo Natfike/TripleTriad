@@ -52,6 +52,9 @@ function App() {
                     <div className="menu-buttons">
                         {isAuthenticated ? (
                             <>
+                                <Link to="/play">
+                                    <button className="ffviii-button">{t('home.play')}</button>
+                                </Link>
                                 <button onClick={handleLogout} className="ffviii-button">
                                     {t('home.logout')}
                                 </button>
