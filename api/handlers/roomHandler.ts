@@ -28,7 +28,28 @@ export default function roomHandler(io: Server, socket: Socket) {
 
         socket.emit('room_joined', { roomId, players });
         socket.to(roomId).emit('player_joined', { username });
+
+        if (players.length == 2) {
+            io.to(roomId).emit('choose_deck', { roomId, players });
+        }
     });
+
+    socket.on('deck_selected', (data) => {
+        const { roomId, username, deck } = data;
+
+        socket.data.deck = deck;
+
+        const players = Array.from(io.sockets.adapter.rooms.get(roomId) || []).map(socketId => {
+            const s = io.sockets.sockets.get(socketId);
+            return { username: s?.data.username, deck: s?.data.deck };
+        });
+
+        if (players.every(p => p.deck)) {
+            io.to(roomId).emit('start_game', { roomId, players });
+        } else {
+            socket.emit('waiting_for_opponent', {});
+        }
+    })
 
     socket.on('leave_room', (data) => {
         const { roomId, player } = data;

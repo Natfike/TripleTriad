@@ -6,7 +6,8 @@
             "authenticate": "Authenticate",
             "gallery": "Gallery",
             "logout": "Logout",
-            "deck":"Modify Decks"
+            "deck":"Modify Decks",
+            "play": "Play"
         },
         "auth": {
             "title":"Authentication",
@@ -37,7 +38,40 @@
             "error":"Error fetching user data.",
             "loading":"Loading user data...",
             "defaultName":"My Deck",
-            "cardList": "Card List"
+            "cardList": "Card List",
+            "emptySlot": ""
+        },
+        "play": {
+            "matchmaking": {
+                "idle": "Idle",
+                "connected": "Connected",
+                "roomCreated": "Room Created",
+                "roomJoined": "Room Joined",
+                "playerJoined": "Player Joined",
+                "playerLeft": "Player Left",
+                "waitingForOpponent": "Waiting for Opponent"
+            },
+            "createGame": "Create Game",
+            "createGameDescription": "Create a new game room",
+            "joinGame": "Join Game",
+            "joinGameDescription": "Join an existing game room",
+            "lobby": "Lobby",
+            "roomId": "Room ID",
+            "player1": "Player 1",
+            "waiting": "Waiting",
+            "vs": "vs",
+            "player2": "Player 2",
+            "leave": "Leave",
+            "gameName": "Game Name",
+            "gameRules": "Game Rules",
+            "open": "Open",
+            "closed": "Closed",
+            "cancel": "Cancel",
+            "loading": "Loading",
+            "chooseYourDeck": "Choose Your Deck",
+            "ready": "Ready",
+            "multiplayer": "Multiplayer",
+            "back": "Back"
         },
         "dailyPull":{
             "title":"Daily Pull",

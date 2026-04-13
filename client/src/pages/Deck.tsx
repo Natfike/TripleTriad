@@ -79,7 +79,7 @@ function Deck() {
         const newDecks = [...decks];
         newDecks[currentDeckIndex].name = e.target.value;
         setDecks(newDecks);
-    }
+    };
 
     const addCardToDeck = (cardId: string) => {
         const newDecks = [...decks];

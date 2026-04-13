@@ -1,11 +1,24 @@
 import { useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 import '../styles/global.css';
-import '../styles/play.css';
+import '../styles/Play.css';
 
-type ViewState = 'menu' | 'create' | 'join' |'lobby';
+type ViewState = 'menu' | 'create' | 'join' |'lobby' | 'choose_deck';
+
+interface Card {
+    _id: string;
+    cardName: string;
+    cardRarity: string;
+    cardImage: string;
+}
+
+interface Deck {
+    name: string;
+    cards: (string | null)[];
+}
 
 function Play(){
 
@@ -18,10 +31,38 @@ function Play(){
     const [joinRoomId, setJoinRoomId] = useState('');
     const [currentRoomId, setCurrentRoomId] = useState('');
     const [players, setPlayers] = useState<string[]>([]);
+    const [decks, setDecks] = useState<Deck[]>([]);
+    const [currentDeckIndex, setCurrentDeckIndex] = useState(0);
+    const [allCards, setAllCards] = useState<Card[]>([]);
+    const [disableChoiceDeckButton, setDisableChoiceDeckButton] = useState(false);
     const username = localStorage.getItem('username');
+    const token = localStorage.getItem('token');
+    const navigate = useNavigate();
     const API_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
+
+        if (!token) {
+            navigate('/');
+        }
+
+        const fetchDecks = axios.get(`${API_URL}/api/users/me`, {
+            headers: { Authorization: `Bearer ${token}` }
+        })
+
+        const fetchAllCards = axios.get(`${API_URL}/api/cards`);
+
+        Promise.all([fetchDecks, fetchAllCards])
+            .then(([userResponse, cardsResponse]) => {
+                const userDecks = userResponse.data.decks || [];
+                setDecks(userDecks.length > 0 ? userDecks : [{ name: t('deck.defaultName'), cards: Array(5).fill(null) }]);
+                setAllCards(cardsResponse.data);
+            }).catch(error => {
+                console.error('Error fetching decks or cards:', error);
+            });
+
+
+        /* SOCKET */
         const newSocket = io(API_URL);
         setSocket(newSocket);
 
@@ -53,11 +94,30 @@ function Play(){
             setStatusText(t('play.matchmaking.playerLeft', { username: data.username }));
         });
 
+        newSocket.on('choose_deck', () => {
+            setCurrentView('choose_deck');
+        });
+
+        newSocket.on('waiting_for_opponent', () => {
+            setDisableChoiceDeckButton(true);
+            setStatusText(t('play.matchmaking.waitingForOpponent'));
+        });
+
+        newSocket.on('start_game', (data) => {
+            navigate('/game', { state: { roomId: data.roomId, players: data.players } });
+        });
+
         return () => {
             newSocket.disconnect();
         }
 
     }, [API_URL, t]);
+
+    const handleSelectDeck = () => {
+        if (socket) {
+            socket.emit('deck_selected', { roomId: currentRoomId, player: username, deck: decks[currentDeckIndex] });
+        }
+    };
 
     const handleCreateGame = (e: React.SubmitEvent<HTMLFormElement>) => {
         if (socket) {
@@ -66,7 +126,7 @@ function Play(){
                 socket.emit('create_room', { roomName, roomRules, username });
             }
         }
-    }
+    };
 
     const handleJoinGame = (e: React.SubmitEvent<HTMLFormElement>) => {
         if (socket) {
@@ -76,7 +136,7 @@ function Play(){
                 socket.emit('join_room', { roomId: joinRoomId, username });
             }
         }
-    }
+    };
 
 
 const renderMenu = () => (
@@ -196,6 +256,72 @@ const renderMenu = () => (
         </form>
     );
 
+    const renderChooseDeck = () => {
+        // Sécurité si les données ne sont pas encore chargées
+        if (decks.length === 0 || allCards.length === 0) return <p>{t('play.loading')}</p>;
+
+        const currentDeck = decks[currentDeckIndex];
+
+        return (
+            <div className="choose-deck-container">
+                <h2 className="gallery-subtitle choose-deck-subtitle">
+                    {t('play.chooseYourDeck') || 'CHOISISSEZ VOTRE DECK'}
+                </h2>
+                
+                <h3 className="choose-deck-name">
+                    {currentDeck.name} ({currentDeckIndex + 1}/{decks.length})
+                </h3>
+
+                <div className="deck-builder-area choose-deck-area">
+                    <button 
+                        className="deck-arrow" 
+                        onClick={() => setCurrentDeckIndex(prev => prev > 0 ? prev - 1 : prev)} 
+                        disabled={currentDeckIndex === 0}
+                    >
+                        &lt;
+                    </button>
+
+                    <div className="deck-slots">
+                        {currentDeck.cards.map((cardId, index) => {
+                            const cardData = allCards.find(c => c._id === cardId);
+
+                            return (
+                                <div key={index} className={`deck-slot readonly ${cardData ? 'has-card' : ''}`}>
+                                    {cardData ? (
+                                        <img 
+                                            src={cardData.cardImage} 
+                                            alt={cardData.cardName} 
+                                            className="deck-slot-image" 
+                                        />
+                                    ) : (
+                                        <span className="empty-slot-text">{t('deck.emptySlot')}</span>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <button 
+                        className="deck-arrow" 
+                        onClick={() => setCurrentDeckIndex(prev => prev < decks.length - 1 ? prev + 1 : prev)} 
+                        disabled={currentDeckIndex === decks.length - 1}
+                    >
+                        &gt;
+                    </button>
+                </div>
+
+                <button 
+                    className="big-open-button choose-deck-ready-btn" 
+                    onClick={handleSelectDeck}
+                    disabled={disableChoiceDeckButton}
+                >
+                    {t('play.ready')}
+                </button>
+                
+            </div>
+        );
+    };
+
     return (
         <div className="room-container">
             <div className="wood-table">
@@ -216,6 +342,7 @@ const renderMenu = () => (
                     {currentView === 'create' && renderCreateForm()}
                     {currentView === 'join' && renderJoinForm()}
                     {currentView === 'lobby' && renderLobby()}
+                    {currentView === 'choose_deck' && renderChooseDeck()}
 
                 </div>
             </div>

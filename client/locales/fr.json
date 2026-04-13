@@ -6,7 +6,8 @@
             "authenticate": "Authentification",
             "gallery": "Gallerie",
             "logout": "Déconnexion",
-            "deck":"Modifier les Decks"
+            "deck":"Modifier les Decks",
+            "play": "Jouer"
         },
         "auth": {
             "title":"Authentification",
@@ -37,7 +38,40 @@
             "error":"Erreur lors de la récupération des données utilisateur.",
             "loading":"Chargement des données utilisateur...",
             "defaultName":"Mon Deck",
-            "cardList": "Liste des cartes"
+            "cardList": "Liste des cartes",
+            "emptySlot": ""
+        },
+        "play": {
+            "matchmaking": {
+                "idle": "Inactif",
+                "connected": "Connecté",
+                "roomCreated": "Pièce créée",
+                "roomJoined": "Pièce rejointe",
+                "playerJoined": "Joueur rejoint",
+                "playerLeft": "Joueur parti",
+                "waitingForOpponent": "En attente d'un adversaire"
+            },
+            "createGame": "Créer une partie",
+            "createGameDescription": "Créer une nouvelle salle de jeu",
+            "joinGame": "Rejoindre une partie",
+            "joinGameDescription": "Rejoindre une salle de jeu existante",
+            "lobby": "Salon",
+            "roomId": "ID de la pièce",
+            "player1": "Joueur 1",
+            "waiting": "En attente",
+            "vs": "vs",
+            "player2": "Joueur 2",
+            "leave": "Quitter",
+            "gameName": "Nom de la partie",
+            "gameRules": "Règles de la partie",
+            "open": "Ouvert",
+            "closed": "Fermé",
+            "cancel": "Annuler",
+            "loading": "Chargement",
+            "chooseYourDeck": "Choisissez votre deck",
+            "ready": "Prêt",
+            "multiplayer": "Multijoueur",
+            "back": "Retour"
         },
         "dailyPull":{
             "title":"Tirage Quotidien",
