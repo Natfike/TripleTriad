@@ -7,6 +7,7 @@
             "gallery": "Gallerie",
             "logout": "Déconnexion",
             "deck":"Modifier les Decks",
+            "replay":"Replays",
             "play": "Jouer"
         },
         "auth": {
@@ -78,7 +79,7 @@
             "title":"Tirage Quotidien",
             "back":"Retour",
             "success":"Succès",
-            "error":"Erreur",
+            "error":"Vous avez déjà fait votre tirage quotidien aujourd'hui, revenez demain !",
             "opening":"Ouverture...",
             "open":"Ouvrir",
             "rewards": "Vos nouvelles cartes :",

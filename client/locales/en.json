@@ -7,6 +7,7 @@
             "gallery": "Gallery",
             "logout": "Logout",
             "deck":"Modify Decks",
+            "replay":"Replays",
             "play": "Play"
         },
         "auth": {
@@ -78,7 +79,7 @@
             "title":"Daily Pull",
             "back":"Back",
             "success":"Success",
-            "error":"Error",
+            "error":"You already did your daily pull today, come back tomorrow !",
             "opening":"Opening...",
             "open":"Open",
             "rewards": "Your new cards :",

@@ -50,7 +50,7 @@ function Play(){
             headers: { Authorization: `Bearer ${token}` }
         }).then(response => {
             const userDecks = response.data.decks || [];
-            const hasCompleteDeck = userDecks.some(deck => deck.cards.every((cardId: string | null) => cardId !== null));
+            const hasCompleteDeck = userDecks.some((deck: Deck) => deck.cards.every((cardId: string | null) => cardId !== null));
             if (!hasCompleteDeck) {
                 navigate('/deck');
             }
@@ -69,7 +69,7 @@ function Play(){
             });
 
         if (decks.length > 0) {
-            const hasCompleteDeck = decks.some(deck => deck.cards.every(cardId => cardId !== null));
+            const hasCompleteDeck = decks.some((deck: Deck) => deck.cards.every(cardId => cardId !== null));
             if (!hasCompleteDeck) {
                 navigate('/decks');
             }
@@ -273,12 +273,12 @@ const renderMenu = () => (
         </form>
     );
 
-    const renderChooseDeck = () => {
+        const renderChooseDeck = () => {
         if (decks.length === 0 || allCards.length === 0) return <p>{t('play.loading')}</p>;
 
         const currentDeck = decks[currentDeckIndex];
 
-        const isCurrentDeckComplete = currentDeck.cards.length === 5 && currentDeck.cards.every(cardId => cardId !== null);
+        const isCurrentDeckComplete = currentDeck.cards.length === 5 && currentDeck.cards.every((cardId: string | null) => cardId !== null);
 
         return (
             <div className="choose-deck-container">

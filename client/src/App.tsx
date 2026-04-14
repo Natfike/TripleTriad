@@ -52,7 +52,7 @@ function App() {
             })
                 .then(response => {
                     const userDecks = response.data.decks || [];
-                    const hasCompleteDeck = userDecks.some(deck => deck.cards && deck.cards.length === 5 && deck.cards.every(cardId => cardId !== null));
+                    const hasCompleteDeck = userDecks.some((deck: any) => deck.cards && deck.cards.length === 5 && deck.cards.every((cardId: string | null) => cardId !== null));
                     setIsDeckComplete(hasCompleteDeck);
                 });
 
