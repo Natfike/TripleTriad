@@ -1,0 +1,90 @@
+.replay-panel {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.replay-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.replay-back-wrapper {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.replay-message {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.replays-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.replay-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    transition: background 0.2s ease;
+}
+
+.replay-item:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.replay-info {
+    flex: 1; 
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.replay-date {
+    color: #aaa;
+    margin-right: 15px;
+}
+
+.replay-opponent {
+    color: #fff;
+    font-weight: bold;
+}
+
+.replay-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.replay-result {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.result-victory { color: #4CAF50; }
+.result-defeat { color: #F44336; }
+.result-draw { color: #aaa; }
+
+.small-button {
+    padding: 5px 15px;
+    font-size: 1.2rem;
+}

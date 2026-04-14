@@ -93,6 +93,19 @@
             "yourTurn": "Your turn",
             "opponentTurn": "Opponent's turn",
             "opponent": "Opponent"
+        },
+        "replay": {
+            "title": "Replays",
+            "loading": "Loading replay...",
+            "noReplays": "No replays available.",
+            "watch": "Watch",
+            "result": {
+                "draw": "Draw",
+                "win": "Victory",
+                "lose": "Defeat"
+            },
+            "start": "Start of the game",
+            "turnPlayed": "Turn {{index}}: {{player}} played"
         }
     }
 }

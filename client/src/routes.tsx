@@ -6,6 +6,8 @@ import Deck from "./pages/Deck";
 import DailyPull from "./pages/DailyPull";
 import Play from "./pages/Play";
 import Game from "./pages/Game";
+import Replay from "./pages/ReplaySelection";
+import ReplayViewer from "./pages/ReplayViewer";
 
 export const router = createBrowserRouter([
     {
@@ -35,5 +37,13 @@ export const router = createBrowserRouter([
     {
         path: "/game",
         element: <Game />,
+    },
+    {
+        path: "/replay",
+        element: <Replay />,
+    },
+    {
+        path: "/replay/:gameId",
+        element: <ReplayViewer />,
     }
 ])

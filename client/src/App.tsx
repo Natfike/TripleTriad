@@ -11,6 +11,7 @@ function App() {
 
   const [dailyPullEnabled, setDailyPullEnabled] = useState(false);
   const [isDeckComplete, setIsDeckComplete] = useState(false);
+  const [hasReplays, setHasReplays] = useState(false);
 
   const token = localStorage.getItem('token');
   const isAuthenticated = !!token;
@@ -54,6 +55,15 @@ function App() {
                     const hasCompleteDeck = userDecks.some(deck => deck.cards && deck.cards.length === 5 && deck.cards.every(cardId => cardId !== null));
                     setIsDeckComplete(hasCompleteDeck);
                 });
+
+            axios.get(`${API_URL}/api/users/replays`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    setHasReplays(response.data.replays && response.data.replays.length > 0);
+                });
         } catch (error) {
             setDailyPullEnabled(false);
         }
@@ -84,6 +94,11 @@ function App() {
                                     disabled={!dailyPullEnabled}
                                     >
                                         {t('home.dailyPull')}
+                                    </button>
+                                </Link>
+                                <Link to={hasReplays ? "/replay" : "#"}>
+                                    <button className="ffviii-button" disabled={!hasReplays}>
+                                        {t('home.replay')}
                                     </button>
                                 </Link>
                             </>

@@ -93,6 +93,19 @@
             "yourTurn": "Votre tour",
             "opponentTurn": "Tour de l'adversaire",
             "opponent": "Adversaire"
+        },
+        "replay": {
+            "title": "Replays",
+            "loading": "Chargement du replay...",
+            "noReplays": "Aucun replay disponible.",
+            "watch": "Regarder",
+            "result": {
+                "draw": "Match nul",
+                "win": "Victoire",
+                "lose": "Défaite"
+            },
+            "start": "Début de la partie",
+            "turnPlayed": "Tour {{index}} : {{player}} a joué"
         }
     }
 }
