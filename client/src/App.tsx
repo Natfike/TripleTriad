@@ -7,6 +7,7 @@ import axios from 'axios';
 function App() {
   const { t, i18n } = useTranslation();
   const API_URL = import.meta.env.VITE_API_URL;
+  console.log('API_URL:', API_URL);
 
   const [dailyPullEnabled, setDailyPullEnabled] = useState(false);
 

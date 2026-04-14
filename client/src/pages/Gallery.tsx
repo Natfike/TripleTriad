@@ -4,11 +4,18 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/Gallery.css';
 
+interface Card {
+    _id: string;
+    cardName: string;
+    cardImage: string;
+    cardRarity: string;
+}
+
 function Gallery() {
 
     const API_URL = import.meta.env.VITE_API_URL;
     const token = localStorage.getItem('token');
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState<Card[]>([]);
     const [ownedCardIds, setOwnedCardIds] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
@@ -56,10 +63,10 @@ function Gallery() {
                     {error && <p className="error-message">{t('gallery.error')}</p>}
 
                     <div className="gallery-grid">
-                        {!isLoading && cards.map((card, index) => {
+                        {!isLoading && cards.map((card) => {
                             const isOwned = ownedCardIds.includes(card._id);
                             return (
-                                <div key={index} className="ffviii-card-item">
+                                <div key={card._id} className="ffviii-card-item">
                                     <h2 className="card-name">{card.cardName}</h2>
                                     <div className="card-image-container">
                                         <img src={card.cardImage} alt={card.cardName} loading="lazy" className={!isOwned ? 'card-not-owned' : ''} />

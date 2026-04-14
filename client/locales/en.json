@@ -18,6 +18,7 @@
             "sign_in":"Sign In",
             "signing_in":"Signing in...",
             "registering":"Creating Account...",
+            "create":"Create Account",
             "created":"Account Created"
         },
         "gallery": {
@@ -82,6 +83,16 @@
             "open":"Open",
             "rewards": "Your new cards :",
             "close":"Close"
+        }
+        ,
+        "game": {
+            "draw": "Draw",
+            "victory": "You win!",
+            "defeat": "You lose!",
+            "backToMenu": "Back to Menu",
+            "yourTurn": "Your turn",
+            "opponentTurn": "Opponent's turn",
+            "opponent": "Opponent"
         }
     }
 }

@@ -9,6 +9,7 @@ import cardRoutes from './routes/cardRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import packRoutes from './routes/packRoutes.js';
 import roomHandler from './handlers/roomHandler.js';
+import gameHandler from './handlers/gameHandler.js';
 
 dotenv.config();
 
@@ -18,7 +19,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: ["http://localhost:5173","https://tripletriad-react.web.app", "https://tripletriad-react.firebaseapp.com"],
         methods: ["GET", "POST"]
     }
 })
@@ -35,6 +36,7 @@ io.on('connection', (socket) => {
     console.log('User connected : ', socket.id);
 
     roomHandler(io, socket);
+    gameHandler(io, socket);
 
     socket.on('disconnect', () => {
         const rooms = Array.from(socket.rooms).filter(r => r !== socket.id);
@@ -54,7 +56,7 @@ if (!MONGO_URI) {
 mongoose.connect(MONGO_URI)
     .then(() => {
         console.log('Connected to MongoDB');
-        httpServer.listen(PORT, () => {
+        httpServer.listen(Number(PORT), "0.0.0.0", () => {
             console.log(`Server is running on port ${PORT}`);
         });
     })

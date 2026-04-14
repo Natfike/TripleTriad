@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { io, Socket } from "socket.io-client";
+import { useSocket } from "../context/SocketContext"; 
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
@@ -23,7 +23,7 @@ interface Deck {
 function Play(){
 
     const { t } = useTranslation();
-    const [socket, setSocket] = useState<Socket | null>(null);
+    const { socket } = useSocket();
     const [statusText, setStatusText] = useState(t('play.matchmaking.idle'));
     const [currentView, setCurrentView] = useState<ViewState>('menu');
     const [roomName, setRoomName] = useState('');
@@ -61,61 +61,73 @@ function Play(){
                 console.error('Error fetching decks or cards:', error);
             });
 
+        if (decks.length > 0) {
+            const hasCompleteDeck = decks.some(deck => deck.cards.every(cardId => cardId !== null));
+            if (!hasCompleteDeck) {
+                navigate('/decks');
+            }
+        }
 
         /* SOCKET */
-        const newSocket = io(API_URL);
-        setSocket(newSocket);
 
-        newSocket.on('connect', () => {
+        if (!socket) return;
+
+        socket.on('connect', () => {
             setStatusText(t('play.matchmaking.connected'));
         });
 
-        newSocket.on('room_created', (data) => {
+        socket.on('room_created', (data) => {
             setCurrentRoomId(data.roomId);
             setPlayers([username || '']);
             setCurrentView('lobby');
             setStatusText(t('play.matchmaking.roomCreated', { roomId: data.roomId }));
         });
 
-        newSocket.on('room_joined', (data) => {
+        socket.on('room_joined', (data) => {
             setCurrentRoomId(data.roomId);
             setPlayers(data.players);
             setCurrentView('lobby');
             setStatusText(t('play.matchmaking.roomJoined', { roomId: data.roomId }));
         });
 
-        newSocket.on('player_joined', (data) => {
+        socket.on('player_joined', (data) => {
             setPlayers((prev) => [...prev, data.username]);
             setStatusText(t('play.matchmaking.playerJoined', { username: data.username }));
         });
 
-        newSocket.on('player_left', (data) => {
+        socket.on('player_left', (data) => {
             setPlayers((prev) => prev.filter(p => p !== data.username));
             setStatusText(t('play.matchmaking.playerLeft', { username: data.username }));
         });
 
-        newSocket.on('choose_deck', () => {
+        socket.on('choose_deck', () => {
             setCurrentView('choose_deck');
         });
 
-        newSocket.on('waiting_for_opponent', () => {
+        socket.on('waiting_for_opponent', () => {
             setDisableChoiceDeckButton(true);
             setStatusText(t('play.matchmaking.waitingForOpponent'));
         });
 
-        newSocket.on('start_game', (data) => {
-            navigate('/game', { state: { roomId: data.roomId, players: data.players } });
+        socket.on('start_game', (data) => {
+            navigate('/game', { state: { roomId: data.roomId, players: data.players, decks: data.decks } });
         });
 
         return () => {
-            newSocket.disconnect();
+            socket.off('room_created');
+            socket.off('room_joined');
+            socket.off('player_joined');
+            socket.off('player_left');
+            socket.off('choose_deck');
+            socket.off('waiting_for_opponent');
+            socket.off('start_game');
         }
 
     }, [API_URL, t]);
 
     const handleSelectDeck = () => {
         if (socket) {
-            socket.emit('deck_selected', { roomId: currentRoomId, player: username, deck: decks[currentDeckIndex] });
+            socket.emit('deck_selected', { roomId: currentRoomId, player: username, deck: decks[currentDeckIndex].cards });
         }
     };
 
@@ -162,7 +174,6 @@ const renderMenu = () => (
                 <div className="room-info-badge">{t('play.roomId')} {currentRoomId}</div>
 
                 <div className="players-vs-area">
-                    {/* Joueur 1 (L'hôte) */}
                     <div className={`player-slot ${player1 ? 'filled' : ''}`}>
                         {player1 ? (
                             <><span>{t('play.player1')}</span><h3>{player1}</h3></>
@@ -173,7 +184,6 @@ const renderMenu = () => (
 
                     <div className="vs-badge">{t('play.vs')}</div>
 
-                    {/* Joueur 2 (Le Challenger) */}
                     <div className={`player-slot ${player2 ? 'filled' : ''}`}>
                         {player2 ? (
                             <><span>{t('play.player2')}</span><h3>{player2}</h3></>
@@ -243,7 +253,7 @@ const renderMenu = () => (
                     type="text" 
                     className="ffviii-input" 
                     value={joinRoomId}
-                    onChange={(e) => setJoinRoomId(e.target.value.toUpperCase())} // Souvent mieux en majuscules pour les ID
+                    onChange={(e) => setJoinRoomId(e.target.value.toUpperCase())}
                     required
                     placeholder="Ex: A7B9-X2"
                 />
@@ -257,7 +267,6 @@ const renderMenu = () => (
     );
 
     const renderChooseDeck = () => {
-        // Sécurité si les données ne sont pas encore chargées
         if (decks.length === 0 || allCards.length === 0) return <p>{t('play.loading')}</p>;
 
         const currentDeck = decks[currentDeckIndex];

@@ -5,6 +5,7 @@ import Auth from "./pages/Auth";
 import Deck from "./pages/Deck";
 import DailyPull from "./pages/DailyPull";
 import Play from "./pages/Play";
+import Game from "./pages/Game";
 
 export const router = createBrowserRouter([
     {
@@ -30,5 +31,9 @@ export const router = createBrowserRouter([
     {
         path: "/play",
         element: <Play />,
+    },
+    {
+        path: "/game",
+        element: <Game />,
     }
 ])

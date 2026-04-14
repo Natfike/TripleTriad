@@ -153,7 +153,7 @@ function Auth() {
                             </div>
                             
                             <button type="submit" className="ffviii-button" disabled={isRegisterLoading}>
-                                {isRegisterLoading ? t('auth.registering') : t('auth.created')}
+                                {t('auth.create')}
                             </button>
                         </form>
 
