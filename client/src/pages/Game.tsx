@@ -30,6 +30,7 @@ function Game(){
     const [opponentHand, setOpponentHand] = useState<GameCard[]>([]);
     const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
     const [currentTurn, setCurrentTurn] = useState<'p1' | 'p2'>('p1');
+    const [isClosedRule, setIsClosedRule] = useState(false);
 
     useEffect(() => {
         if (!socket || !roomId || !username) {
@@ -48,6 +49,7 @@ function Game(){
             const role = gameState.players.p1.username === username ? 'p1' : 'p2';
             myRoleRef.current = role;
             setCurrentTurn(gameState.currentTurn);
+            setIsClosedRule(gameState.rules.includes('closed'));
 
             const formatDeck = (deck: any[], owner: 'p1' | 'p2'): GameCard[] => {
                 return deck.map(card => ({
@@ -199,7 +201,9 @@ function Game(){
                         <div className="cards-stack">
                             {opponentHand.map((card) => (
                                 <div key={card.id} className="game-card p2-card">
-                                    {card.image ? (
+                                    {isClosedRule ? (
+                                        <img src="https://res.cloudinary.com/dzp2e57l2/image/upload/v1776199128/back.webp" alt="Card Back" />
+                                    ) : card.image ? (
                                         <img src={card.image} alt="Opponent Card" />
                                     ) : (
                                         <div className="card-placeholder">Card</div>
