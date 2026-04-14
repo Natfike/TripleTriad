@@ -48,7 +48,14 @@ function Play(){
 
         const fetchDecks = axios.get(`${API_URL}/api/users/me`, {
             headers: { Authorization: `Bearer ${token}` }
-        })
+        }).then(response => {
+            const userDecks = response.data.decks || [];
+            const hasCompleteDeck = userDecks.some(deck => deck.cards.every((cardId: string | null) => cardId !== null));
+            if (!hasCompleteDeck) {
+                navigate('/deck');
+            }
+            return response;
+        });
 
         const fetchAllCards = axios.get(`${API_URL}/api/cards`);
 
@@ -271,6 +278,8 @@ const renderMenu = () => (
 
         const currentDeck = decks[currentDeckIndex];
 
+        const isCurrentDeckComplete = currentDeck.cards.length === 5 && currentDeck.cards.every(cardId => cardId !== null);
+
         return (
             <div className="choose-deck-container">
                 <h2 className="gallery-subtitle choose-deck-subtitle">
@@ -322,7 +331,7 @@ const renderMenu = () => (
                 <button 
                     className="big-open-button choose-deck-ready-btn" 
                     onClick={handleSelectDeck}
-                    disabled={disableChoiceDeckButton}
+                    disabled={disableChoiceDeckButton || !isCurrentDeckComplete}
                 >
                     {t('play.ready')}
                 </button>

@@ -10,6 +10,7 @@ function App() {
   console.log('API_URL:', API_URL);
 
   const [dailyPullEnabled, setDailyPullEnabled] = useState(false);
+  const [isDeckComplete, setIsDeckComplete] = useState(false);
 
   const token = localStorage.getItem('token');
   const isAuthenticated = !!token;
@@ -28,9 +29,10 @@ function App() {
   useEffect(() => {
         if (!token) {
             setDailyPullEnabled(false);
+            setIsDeckComplete(false);
             return;
         }
-
+        
         try {
             axios.get(`${API_URL}/api/users/dailyPullAvailable`, {
                 headers: {
@@ -39,6 +41,18 @@ function App() {
             })
                 .then(response => {
                     setDailyPullEnabled(response.data.dailyPullAvailable);
+                });
+
+
+            axios.get(`${API_URL}/api/users/me`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then(response => {
+                    const userDecks = response.data.decks || [];
+                    const hasCompleteDeck = userDecks.some(deck => deck.cards && deck.cards.length === 5 && deck.cards.every(cardId => cardId !== null));
+                    setIsDeckComplete(hasCompleteDeck);
                 });
         } catch (error) {
             setDailyPullEnabled(false);
@@ -53,8 +67,10 @@ function App() {
                     <div className="menu-buttons">
                         {isAuthenticated ? (
                             <>
-                                <Link to="/play">
-                                    <button className="ffviii-button">{t('home.play')}</button>
+                                <Link to={isDeckComplete ? "/play" : "/deck"}>
+                                    <button className="ffviii-button" disabled={!isDeckComplete}>
+                                        {t('home.play')}
+                                    </button>
                                 </Link>
                                 <button onClick={handleLogout} className="ffviii-button">
                                     {t('home.logout')}
