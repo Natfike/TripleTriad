@@ -1,0 +1,22 @@
+.notfound-panel {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.notfound-title {
+    font-size: 5rem;
+    color: #F44336; 
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.notfound-message {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: #ccc;
+}
+
+.notfound-button {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+}

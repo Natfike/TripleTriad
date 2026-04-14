@@ -8,6 +8,7 @@ import Play from "./pages/Play";
 import Game from "./pages/Game";
 import Replay from "./pages/ReplaySelection";
 import ReplayViewer from "./pages/ReplayViewer";
+import NotFound from "./pages/NotFound";
 
 export const router = createBrowserRouter([
     {
@@ -45,5 +46,9 @@ export const router = createBrowserRouter([
     {
         path: "/replay/:gameId",
         element: <ReplayViewer />,
+    },
+    {
+        path: "*",
+        element: <NotFound />,
     }
 ])

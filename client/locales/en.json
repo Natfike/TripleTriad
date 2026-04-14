@@ -106,6 +106,10 @@
             },
             "start": "Start of the game",
             "turnPlayed": "Turn {{index}}: {{player}} played"
+        },
+        "error": {
+            "notFound": "This page is not in the archives of the history room...",
+            "returnHome": "Return to Home"
         }
     }
 }

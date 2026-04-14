@@ -106,6 +106,10 @@
             },
             "start": "Début de la partie",
             "turnPlayed": "Tour {{index}} : {{player}} a joué"
+        },
+        "error": {
+            "notFound": "Cette page n'est pas dans les archives de la salle d'histoire...",
+            "returnHome": "Retour à l'accueil"
         }
     }
 }
